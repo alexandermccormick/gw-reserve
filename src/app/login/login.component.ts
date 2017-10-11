@@ -11,12 +11,10 @@ export class LoginComponent {
   constructor(private loginService:LoginService) {  }
 
   public login() {
-    alert('hello');
     this.loginService.login();
   }
 
   public logout() {
-    alert('hello');
     this.loginService.logout();
   }
 
