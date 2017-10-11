@@ -5,6 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { RoomsComponent } from '../rooms/rooms.component';
 import { LogInGuardService } from "../services/login-guard.service";
+import { CanDeactivateService } from "../services/canDeactivate.service";
 
 const routes:Routes = [
   {
@@ -14,7 +15,8 @@ const routes:Routes = [
   {
     path: "rooms/:id",
     component: RoomsComponent,
-    canActivate: [LogInGuardService]
+    canActivate: [LogInGuardService],
+    canDeactivate: [CanDeactivateService]
   },
   {
       path: "rooms",
@@ -40,7 +42,8 @@ export const routingComponents = [WelcomeComponent, RoomsComponent]
   ],
   exports: [RouterModule],
   providers: [
-    LogInGuardService
+    LogInGuardService,
+    CanDeactivateService
   ]
 })
 export class RoutingModule { }
