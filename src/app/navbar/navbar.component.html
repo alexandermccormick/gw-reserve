@@ -1,0 +1,15 @@
+<nav>
+  <div class="btn-container">
+      <button *ngFor="let item of navLinks" [routerLink]="item.url">
+        <p>{{ item.title }}</p>
+        <span></span>
+      </button>
+  </div>
+  <img src="../assets/img/logo-white.png" alt="Bitwise">
+  <span class="title-one">Room</span>
+  <span class="title-two">Reservation</span>
+  <div class="user-actions">
+    <gw-login></gw-login>
+  </div>
+
+</nav>

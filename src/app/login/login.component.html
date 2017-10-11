@@ -1,0 +1,10 @@
+<div class="actions">
+  <select>
+    <option>Select</option>
+    <option>Google</option>
+    <option>Github</option>
+  </select>
+  <button class="login" [disabled]="username" (click)="login()">Login</button>
+  <button class="logout" [disabled]="!username" (click)="logout()">Logout</button>
+  <!-- {{ username | json }} -->
+</div>
