@@ -1,8 +1,8 @@
 <nav>
   <div class="btn-container">
-      <button *ngFor="let item of navLinks" [routerLink]="item.url">
-        <p>{{ item.title }}</p>
-        <span></span>
+      <button *ngFor="let item of navLinks" [@btnHoverState]="this.state" (mouseenter)="this.toggleState()" [routerLink]="item.url">
+        <p >{{ item.title }}</p>
+        <span [@spanHoverState]="this.state"></span>
       </button>
   </div>
   <img src="../assets/img/logo-white.png" alt="Bitwise">
